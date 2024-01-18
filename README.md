@@ -5,6 +5,9 @@
 2. flutter clean 
 3. flutter pub get
 4. flutter run
+5. Change the code that says "API_KEY" on line 34 in android/app/src/main/AndroidManifest.xml with the actual API_KEY found in the PDF template submission
+6. Change the code that says "API_KEY" on line 11 in ios/Runner/AppDelegate.swift with the actual API_KEY found in the PDF template submission
+7. Change the code that says "API_KEY" on line 31 in lib/screen/map_prop/place_utils.dart with the actual API_KEY found in the PDF template submission
 
 ==TEAM DESCRIPTION==
 
