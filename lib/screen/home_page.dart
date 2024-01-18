@@ -1,13 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:uhealth/intro/login_page.dart';
-import 'package:uhealth/screen/daily_check.dart';
-import 'package:uhealth/screen/health_forum.dart';
 import 'package:uhealth/screen/home-prop/button-row.dart';
 import 'package:uhealth/screen/home-prop/report.dart';
-import 'package:uhealth/screen/nearest_hospital.dart';
-import 'package:uhealth/screen/online_consultation.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

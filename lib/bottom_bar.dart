@@ -41,7 +41,7 @@ class _BottomNavBarState extends State<CustomBottomNavBar> {
                   ),
                 )),
             Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 70),
+                padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: GestureDetector(
                   onTap: () {
                     setState(() {

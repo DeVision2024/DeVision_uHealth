@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -5,11 +8,21 @@ import 'package:permission_handler/permission_handler.dart';
 
 class Maps extends StatelessWidget {
   final double height;
-
   const Maps({Key? key, this.height = 550}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Completer gmap_controller = Completer();
+
+    const CameraPosition klinik_pratama = CameraPosition(
+        target: LatLng(-6.976827313843711, 107.63046512905223), zoom: 17.0);
+
+    Future goToRumahSakit() async {
+      final GoogleMapController controller = await gmap_controller.future;
+      await controller
+          .animateCamera(CameraUpdate.newCameraPosition(klinik_pratama));
+    }
+
     return Container(
       height: height,
       child: FutureBuilder<Position>(
@@ -25,20 +38,26 @@ class Maps extends StatelessWidget {
           } else {
             Position currentPosition = snapshot.data!;
             LatLng currentLatLng =
-            LatLng(currentPosition.latitude, currentPosition.longitude);
+                LatLng(currentPosition.latitude, currentPosition.longitude);
 
             return GoogleMap(
               initialCameraPosition: CameraPosition(
                 target: currentLatLng,
-                zoom: 12.0,
+                zoom: 17.0,
               ),
-              markers: {
-                Marker(
-                  markerId: MarkerId('YourMarkerId'),
-                  position: currentLatLng,
-                  infoWindow: InfoWindow(title: 'Your Marker'),
-                ),
+              myLocationEnabled: true,
+              zoomControlsEnabled: true,
+              mapType: MapType.normal,
+              onMapCreated: (GoogleMapController controller) {
+                gmap_controller.complete(controller);
               },
+              // markers: {
+              //   Marker(
+              //     markerId: MarkerId('YourMarkerId'),
+              //     position: currentLatLng,
+              //     infoWindow: InfoWindow(title: 'Your Marker'),
+              //   ),
+              // },
             );
           }
         },

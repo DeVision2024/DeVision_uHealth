@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uhealth/bottom_bar.dart';
 import 'package:uhealth/screen/home_page.dart';
 import 'package:uhealth/intro/register_page.dart';
 
@@ -160,8 +161,8 @@ class _LoginPageState extends State<LoginPage> {
       // await FirebaseAuth.instance.currentUser!.reload();
       // await FirebaseAuth.instance.currentUser!.displayName.toString();
 
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const HomePage()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const CustomBottomNavBar()));
     } catch (e) {
       print('Error signing in: $e');
       // print('Email : ${FirebaseAuth.instance.currentUser!.email}');

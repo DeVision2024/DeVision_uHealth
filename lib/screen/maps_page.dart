@@ -14,12 +14,12 @@ class MapsPage extends StatefulWidget {
 class _MapsPageState extends State<MapsPage> {
   @override
   Widget build(BuildContext context) {
-    return
-      Scaffold(
+    final abc = {};
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Maps(),
+            Maps(abc),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
@@ -33,7 +33,7 @@ class _MapsPageState extends State<MapsPage> {
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            // SizedBox(height: 20),
             ButtonRowMap(),
           ],
         ),

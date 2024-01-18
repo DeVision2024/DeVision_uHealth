@@ -26,13 +26,16 @@ class Place {
   }
 }
 
-Future<List<Place>> getNearestHospitals(double latitude, double longitude) async {
-  final String apiKey = 'AIzaSyCMB2mdjCtUjFu2EArEi1xLFbzSs_OUdJY';
-  final String endpoint = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json';
+Future<List<Place>> getNearestHospitals(
+    double latitude, double longitude) async {
+  final String apiKey = 'API_KEY';
+  final String endpoint =
+      'https://maps.googleapis.com/maps/api/place/nearbysearch/json';
   final String type = 'hospital';
   final String radius = '5000';
 
-  final String url = '$endpoint?location=$latitude,$longitude&type=$type&radius=$radius&key=$apiKey';
+  final String url =
+      '$endpoint?location=$latitude,$longitude&type=$type&radius=$radius&key=$apiKey';
 
   final response = await http.get(Uri.parse(url));
 
@@ -41,7 +44,8 @@ Future<List<Place>> getNearestHospitals(double latitude, double longitude) async
 
     if (data['status'] == 'OK') {
       final List<dynamic> results = data['results'];
-      List<Place> places = results.map((result) => Place.fromJson(result)).toList();
+      List<Place> places =
+          results.map((result) => Place.fromJson(result)).toList();
       return places;
     } else {
       throw Exception('Error: ${data['status']}');
