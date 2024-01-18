@@ -4,9 +4,10 @@
 1. git clone https://github.com/DeVision2024/DeVision_uHealth
 2. flutter clean 
 3. flutter pub get
-4. flutter run
+4. flutter run
 
 ==TEAM DESCRIPTION==
+
 DeVision consists of 4 people who are divided into several roles, namely:
 - Nayla as Hustler
 - Fadia as Hipster
@@ -14,9 +15,11 @@ DeVision consists of 4 people who are divided into several roles, namely:
 DeVision collaborates with fellow members to get the best results which aim to provide solutions to problems.
 
 DeVision is a team that develops health applications related to SDGs point 3, namely Good Health and Well Being. We use several tools from Google such as Firebase, Flutter and Google Cloud to develop an application that we call "uHealth". We pay attention to the health side of Indonesia which is lacking due to the lack of facilities that support the efficiency of transparency of one's health data. DeVision cares about health in Indonesia, therefore we are trying to help Indonesian people care more with the "uHealth" application.
+
    
 
 ==PRODUCT DESCRIPTION==
+
 Many people are not yet aware of the importance of regular health checks/medical check-ups, plus the difficulty of access and the complexity of the medical check-up process is the reason why medical check-ups are not commonly carried out in the community. Apart from that, the difficulty of information and access to the nearest hospital or pharmacy is also one of the problems in carrying out this medical check-up. 
 
 Therefore, with our application we make it easier and closer to access health for the community. The problem of difficult medical check-ups will later be resolved with our daily medical check-up feature. This daily check-up feature will later be integrated with the user's medical history and also a reminder if the user is undergoing outpatient treatment every time the user has a scheduled check-up.
@@ -26,8 +29,8 @@ Our idea also has a feature in the form of online consultations to facilitate in
 Our features prioritize making it easier for people to care about their health.
 
 
-
 ==PRODUCT SCREENSHOTS==
+
 Register : 
   - Description = User registers his account for the first time with the type of actor the user wants
 ![image](https://github.com/DeVision2024/DeVision_uHealth/assets/103319074/6bf83a5f-bf03-4781-9e6a-e88ba316facb)
@@ -42,6 +45,8 @@ Home :
 
 Daily Checkup :
   - Description = The user can input the current medical condition and later the system will help the user to monitor the "Daily Nutrition", "Daily Medicine", "Daily Water" that must be consumed. And if the user is currently undergoing outpatient treatment, the system will help the user to check on what day there will be a next check in the "Calendar". Users will also know the "Health Record" where user data will be taken from the hospital that has treated the user. [Feature Not Done Yet]
+
+    
 ![image](https://github.com/DeVision2024/DeVision_uHealth/assets/103319074/c462f403-3eb3-41a0-b468-55fce8842860)
 
 Consultation : 
