@@ -14,12 +14,11 @@ class MapsPage extends StatefulWidget {
 class _MapsPageState extends State<MapsPage> {
   @override
   Widget build(BuildContext context) {
-    final abc = {};
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Maps(abc),
+            Maps(),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
