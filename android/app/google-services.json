@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "954738987178",
+    "project_id": "devision-2f453",
+    "storage_bucket": "devision-2f453.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954738987178:android:f2f3e7393525016c1040d3",
+        "android_client_info": {
+          "package_name": "com.example.uhealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXl6Mbhr6uItFbEeM1-NvvTYJepNyhdN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
